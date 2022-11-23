@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ToD</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="list hide hidden" id="listMenu">
+      <div class="header-small">Players</div>
+      <div id="registeredPlayers">No Players Registered Yet</div>
+      <div class="spacer"></div>
+      <div class="header-small hidden" id="optionsHeader">Options</div>
+      <div id="optionsList">
+        <div class="hidden">• Made-Up Tasks</div>
+        <div class="hidden">• Harder Tasks</div>
+        <div class="hidden">• Task Level Increase</div>
+        <div class="hidden">
+          • Partner
+          <div class="playerList"></div>
+        </div>
+        <div class="hidden">
+          • Crush
+          <div class="playerList"></div>
+        </div>
+      </div>
+      <div class="spacer"></div>
+      <div class="header-small hidden" id="level"></div>
+      <div class="spacer"></div>
+      <button class="btn hidden" id="restartBtn">Restart Game</button>
+      <div class="spacer-small"></div>
+      <button class="btn" id="resetBtn">New Game</button>
+      <div class="spacer-large"></div>
+      <div class="spacer-large"></div>
+      <div class="spacer"></div>
+    </div>
+    <button class="listBtn" id="listBtn">
+      <img src="src/list_40px.svg" alt="Menu" />
+    </button>
+    <div class="spacer-large"></div>
+    <div class="spacer-large"></div>
+    <div class="itemContainer center setWidth" id="newGameContainer">
+      <div class="spacer-verySmall"></div>
+      <div class="header center">New Game</div>
+      <div class="spacer"></div>
+      <div class="inpContainer center setWidth">
+        <div id="playerInpWrapper">
+          <input type="text" class="inp" id="player0" placeholder="Player 1" />
+          <img src="src/male_25px.svg" alt="Sex" class="sex" />
+          <div class="spacer-small"></div>
+          <input type="text" class="inp" id="player1" placeholder="Player 2" />
+          <img src="src/male_25px.svg" alt="Sex" class="sex" />
+          <div class="spacer-small"></div>
+          <input type="text" class="inp" id="player2" placeholder="Player 3" />
+          <img src="src/male_25px.svg" alt="Sex" class="sex" />
+          <div class="spacer-small"></div>
+        </div>
+        <input
+          class="btn center"
+          type="submit"
+          id="addPlayer"
+          value="Add Player"
+        />
+        <div class="spacer-small"></div>
+        <input
+          class="btn center"
+          type="submit"
+          id="removePlayer"
+          value="Remove Player"
+          disabled
+        />
+        <div class="spacer-small"></div>
+        <input
+          class="btn center"
+          type="submit"
+          id="forward"
+          value="Forward"
+          disabled
+        />
+        <div class="spacer"></div>
+      </div>
+    </div>
+    <div class="itemContainer center setWidth hidden" id="moreOptionsContainer">
+      <div class="spacer-verySmall"></div>
+      <div class="header center">More Options</div>
+      <div class="spacer"></div>
+      <div class="inpContainer center setWidth">
+        <div class="inpWrapper">
+          <input type="checkbox" class="checkboxInp" id="option0" />
+          <label
+            for="option0"
+            class="checkboxText"
+            title="If someone doesn't want to do their task, someone else can make one up"
+            >Made-Up Tasks</label
+          >
+        </div>
+        <div class="spacer-verySmall"></div>
+        <div class="inpWrapper">
+          <input type="checkbox" class="checkboxInp" id="option1" />
+          <label
+            for="option1"
+            class="checkboxText"
+            title="If someone doesn't want to do their task, a harder task will be generated"
+            >Harder Tasks</label
+          >
+        </div>
+        <div class="spacer-verySmall"></div>
+        <div class="inpWrapper">
+          <input type="checkbox" class="checkboxInp" id="option2" />
+          <label
+            for="option2"
+            class="checkboxText"
+            title="Every round the tasks will be harder"
+            >Task Level Increase</label
+          >
+        </div>
+        <div class="spacer-verySmall"></div>
+        <div class="inpWrapper">
+          <input type="checkbox" class="checkboxInp" id="option3" />
+          <label
+            for="option3"
+            class="checkboxText"
+            title="Add relationships (Partner 1 ❤️ Partner 2)"
+            >Partner</label
+          >
+        </div>
+        <div id="partnerWrapper" class="hidden">
+          <div class="spacer-small"></div>
+          <div id="partnerInpWrapper"></div>
+          <input
+            class="btn center"
+            type="submit"
+            id="addPair"
+            value="Add Pair"
+          />
+          <div class="spacer-small"></div>
+          <input
+            class="btn center"
+            type="submit"
+            id="removePair"
+            value="Remove Pair"
+            disabled
+          />
+          <div class="spacer-small"></div>
+        </div>
+        <div class="spacer-verySmall"></div>
+        <div class="inpWrapper">
+          <input type="checkbox" class="checkboxInp" id="option4" />
+          <label
+            for="option4"
+            class="checkboxText"
+            title="Add relationships (Spieler 1 ❤️→ Spieler 2)"
+            >Crush</label
+          >
+        </div>
+        <div id="crushWrapper" class="hidden">
+          <div class="spacer-small"></div>
+          <div id="crushInpWrapper"></div>
+          <input
+            class="btn center"
+            type="submit"
+            id="addCrush"
+            value="Add Crush"
+          />
+          <div class="spacer-small"></div>
+          <input
+            class="btn center"
+            type="submit"
+            id="removeCrush"
+            value="Remove Crush"
+            disabled
+          />
+        </div>
+        <div class="spacer"></div>
+        <input class="btn center" type="submit" id="forward" value="Forward" />
+        <div class="spacer-small"></div>
+        <input class="btn center" type="submit" id="backward" value="Back" />
+        <div class="spacer"></div>
+      </div>
+    </div>
+    <div id="gameContainer" class="hidden center">
+      <div id="gameStage0">
+        <div class="header">Loading...</div>
+        <div class="spacer-large"></div>
+        <div class="spacer"></div>
+        <button class="btn vote" id="voteTruth">Truth</button>
+        <div class="spacer-small"></div>
+        <button class="btn vote" id="voteDare">Dare</button>
+      </div>
+      <div class="hidden" id="gameStage1">
+        <div class="header">Loading...</div>
+        <div class="spacer-large"></div>
+        <div class="spacer"></div>
+        <button class="btn" id="restartBtn">Restart Game</button>
+        <div class="spacer-small"></div>
+        <button class="btn hidden" id="imaginaryTasksBtn">Made-Up Task</button>
+        <div class="spacer-small hidden"></div>
+        <button class="btn hidden" id="harderTasksBtn">Harder Task</button>
+      </div>
+    </div>
+  </body>
+  <script src="src/truth.js"></script>
+  <script src="src/dare.js"></script>
+  <script src="script.js"></script>
+  <!-- remove list animation on load -->
+  <script defer>
+    document.getElementById('listMenu').classList.remove('hidden')
+  </script>
+</html>
