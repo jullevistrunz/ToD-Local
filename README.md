@@ -24,7 +24,7 @@ Add relations (Player 1 ❤️→ Player 2)
 
 ---
 
-Check the [Wiki](https://github.com/jullevistrunz/ToD-Local/wiki) für more information and developer information
+Check the [Wiki](https://github.com/jullevistrunz/ToD-Local/wiki) for more information and developer information
 
 ---
 
