@@ -1,35 +1,31 @@
-# WoP-Local
+# ToD-Local
 
-### Wahrheit oder Pflicht mit folgenden Optionen
+### Truth or Dare with these Tasks
 
-#### 1. Ausgedachte Aufgaben
+#### 1. Made-Up Tasks
 
-Wenn jemand seine Aufgabe nicht erfüllen möchte, kann sich jemand anderes eine Aufgabe ausdenken
+If someone doesn't want to do their task, someone else can make one up
 
-#### 2. Schwerere Aufgaben
+#### 2. Harder Tasks
 
-Wenn jemand seine Aufgabe nicht erfüllen möchte, wird eine schwerere Aufgabe generiert
+If someone doesn't want to do their task, a harder task will be generated
 
-#### 3. Aufgaben Steigerung
+#### 3. Task Level Increase
 
-Von Runde zu Runde werden die Aufgaben schwerer
+Every round the tasks will be harder
 
 #### 4. Partner
 
-Feste Beziehungen hinzufügen (Partner 1 ❤️ Partner 2)
+Add relations (Partner 1 ❤️ Partner 2)
 
 #### 5. Crush
 
-Crush hinzufügen (Spieler 1 ❤️→ Spieler 2)
+Add relations (Player 1 ❤️→ Player 2)
 
 ---
 
-Siehe [Wiki](https://github.com/jullevistrunz/WoP-Local/wiki) für mehr Informationen und Entwickler Informationen
+Check the [Wiki](https://github.com/jullevistrunz/ToD-Local/wiki) für more information and developer information
 
 ---
 
-Truth or dare with options
-
----
-
-> Language: DE / German
+> Language: EN / English
